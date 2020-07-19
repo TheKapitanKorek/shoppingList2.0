@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shoping list</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="app">
+        <div>
+          <h1>Add new product</h1>
+          <div id="input_panel">
+            <form>
+              <div id="double_input">
+                <input
+                  class="input"
+                  id="product_name"
+                  type="text"
+                  placeholder="product name"
+                />
+                <input
+                  class="input"
+                  id="unit"
+                  type="number"
+                  placeholder="units/kg"
+                />
+              </div>
+              <div class="switch">
+                <span>Quantity</span>
+                <label class="switch_btn">
+                  <input id="qt_or_weight" type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+                <span>Weight</span>
+              </div>
+              <div id="category_box">
+                <select id="category" name="type">
+                  <option value="vegetables">Vegetables</option>
+                  <option value="fruits">Fruits</option>
+                  <option value="meat">Meat</option>
+                </select>
+                <div class="btn_container">
+                  <button id="submit"><span>+</span></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <h2>Your shopping list</h2>
+        <div id="main">
+          <div id="product_list">
+            <div class="deco">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div id="header">
+              <span class="product">Product</span>
+              <span class="weight">Weight</span>
+              <span class="quantity">Quantity</span>
+              <span class="category_col">Category</span>
+            </div>
+            <div id="list_content">
+              <div class="category" id="vegetables">
+                <div class="label"><span>vegetables</span></div>
+                <ul class="list"></ul>
+              </div>
+              <div class="category" id="fruits">
+                <div class="label"><span>fruits</span></div>
+                <ul class="list"></ul>
+              </div>
+              <div class="category" id="meat">
+                <div class="label"><span>meat</span></div>
+                <ul class="list"></ul>
+              </div>
+            </div>
+          </div>
+          <div id="side_content">
+            <div id="sums">
+              <div class="sum_row">
+                <span class="side_heading">Total Quantity:</span>
+                <span>144</span>
+              </div>
+              <div class="sum_row">
+                <span class="side_heading">Total Weight:</span>
+                <span>19 kg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>
