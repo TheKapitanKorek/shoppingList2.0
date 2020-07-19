@@ -28,7 +28,7 @@ export const displayProduct = (id, name, quantity, weight, category) => {
 };
 export const viewDeleteProduct = (product_id) => {
   console.log(product_id);
-  element = document.querySelector('[product_id="' + product_id + '"]');
+  const element = document.querySelector('[product_id="' + product_id + '"]');
   element.parentNode.removeChild(element);
 };
 export const clearInputs = () => {

@@ -89,5 +89,8 @@ const controlEditProduct = () => {
   //1)delete product
   //2)add product
 };
+const controlRenderList = () => {
+  //1)delete
+};
 setupEventListeners();
 const list = new List(getList());
