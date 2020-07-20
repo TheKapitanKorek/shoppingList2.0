@@ -261,6 +261,9 @@ select {
   align-items: center;
   border-bottom: 2px solid var(--blue);
 }
+.selected {
+  background: #677bde41;
+}
 .item div {
   border-right: 2px solid var(--blue);
   height: 100%;
@@ -277,6 +280,9 @@ select {
   display: flex;
   justify-content: flex-end;
   padding: 0.2em 0;
+}
+.hidden {
+  display: none;
 }
 .label span {
   text-align: center;

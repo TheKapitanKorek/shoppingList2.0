@@ -15,10 +15,20 @@ export default class List {
     }
     return 1;
   }
-  getWeightSum() {
-    return this.productList.map((el) => el.weight).reduce((a, b) => a + b);
+  getSum(what) {
+    if (this.productList.length > 1) {
+      return this.productList
+        .map((el) => el[what])
+        .reduce((a, b) => (a ? a : 0 + b ? b : 0));
+    } else if (this.productList.length === 1) {
+      const num = this.productList[0][what];
+      return num ? num : 0;
+    } else {
+      return 0;
+    }
   }
-  getQuantitySum() {
-    return this.productList.map((el) => el.quantity).reduce((a, b) => a + b);
+  getProductById(id) {
+    const index = this.productList.findIndex((el) => el.id == id);
+    return this.productList[index];
   }
 }

@@ -13,7 +13,7 @@ export const displayProduct = (id, name, quantity, weight, category) => {
   const DOMElement = `
   <li class="item" product_id=${id}>
   <div class="product">${name}</div>
-  <div class="weight">${weight}kg</div>
+  <div class="weight">${weight}${weight ? "kg" : "  "}</div>
   <div class="quantity">${quantity}</div>
   <div class="edit_delete">
     <button aria-label="Edytuj" class="edit">
@@ -27,7 +27,6 @@ export const displayProduct = (id, name, quantity, weight, category) => {
   parent.insertAdjacentHTML("beforeend", DOMElement);
 };
 export const viewDeleteProduct = (product_id) => {
-  console.log(product_id);
   const element = document.querySelector('[product_id="' + product_id + '"]');
   element.parentNode.removeChild(element);
 };
@@ -35,4 +34,24 @@ export const clearInputs = () => {
   elements.inputName.value = "";
   elements.inputUnit.value = "";
   elements.inputSwitch.checked = false;
+};
+export const insertProductToInputs = ({ name, quantity, weight, category }) => {
+  if (weight) {
+    elements.inputSwitch.checked = false;
+    elements.inputUnit.value = weight;
+  } else {
+    elements.inputUnit.value = quantity;
+  }
+  elements.inputName.value = name;
+  elements.inputCategory.value = category;
+};
+export const highlightProduct = (product_id) => {
+  const element = document.querySelector('[product_id="' + product_id + '"]');
+  element.classList.add("selected");
+};
+export const removeHighlight = () => {
+  const element = document.querySelector(".selected");
+  if (element) {
+    element.classList.remove("selected");
+  }
 };

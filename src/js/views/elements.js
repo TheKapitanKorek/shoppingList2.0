@@ -5,7 +5,9 @@ export default {
   inputCategory: document.getElementById("category"),
   submitButton: document.getElementById("submit"),
   productList: document.getElementById("product_list"),
-  wegetablesList: document.getElementById("wegetables"),
-  fruitList: document.getElementById("fruits"),
-  meatList: document.getElementById("meat"),
+  vegetables: document.getElementById("vegetables"),
+  fruits: document.getElementById("fruits"),
+  meat: document.getElementById("meat"),
+  quantitySum: document.getElementById("quantity_sum"),
+  weightSum: document.getElementById("weight_sum"),
 };
