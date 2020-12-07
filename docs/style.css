@@ -319,14 +319,17 @@ select {
   padding-bottom: 1em;
 }
 .product {
+  overflow: hidden;
   text-align: center;
   width: 20%;
 }
 .weight {
+  overflow: hidden;
   width: 20%;
   text-align: center;
 }
 .quantity {
+  overflow: hidden;
   width: 20%;
   text-align: center;
 }
