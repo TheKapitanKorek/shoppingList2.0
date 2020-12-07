@@ -3,8 +3,8 @@ import elements from "./elements";
 export const getInput = () => {
   const what = elements.inputSwitch.checked;
   const name = elements.inputName.value;
-  const weight = what === true ? elements.inputUnit.value : "";
-  const quantity = what === false ? elements.inputUnit.value : "";
+  const weight = what === true ? elements.inputUnit.value : 0;
+  const quantity = what === false ? elements.inputUnit.value : 0;
   const category = elements.inputCategory.value;
   return { name, weight, quantity, category };
 };
@@ -13,8 +13,8 @@ export const displayProduct = (id, name, quantity, weight, category) => {
   const DOMElement = `
   <li class="item" product_id=${id}>
   <div class="product">${name}</div>
-  <div class="weight">${weight}${weight ? "kg" : "  "}</div>
-  <div class="quantity">${quantity}</div>
+  <div class="weight">${weight !==0 ? weight + "kg" : ""}</div>
+  <div class="quantity">${quantity !==0 ? quantity : ""}</div>
   <div class="edit_delete">
     <button aria-label="Edytuj" class="edit">
       <img src="./images/edit.svg" alt="edytuj" />

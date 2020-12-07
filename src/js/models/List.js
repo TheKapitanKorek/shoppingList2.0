@@ -19,7 +19,7 @@ export default class List {
     if (this.productList.length > 1) {
       return this.productList
         .map((el) => el[what])
-        .reduce((a, b) => (a ? a : 0 + b ? b : 0));
+        .reduce((a, b) => (a+b));
     } else if (this.productList.length === 1) {
       const num = this.productList[0][what];
       return num ? num : 0;

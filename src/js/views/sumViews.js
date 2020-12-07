@@ -1,4 +1,3 @@
-import elemets from "./elements";
 import elements from "./elements";
 
 export const updateSums = (wtSum, qtSum) => {
